@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JSP - Hello World</title>
+</head>
+<body>
+<h1 style="text-align:center">Session</h1>
+
+<p>Enter one of these numbers: <br>
+1 - get session ID and the time when this session was created <br>
+2 - get current server time <br>
+3 - get the amount of requests during this session <br>
+</p>
+
+<br>
+<!--write in the action attribute the URL pattern of the servlet without /-->
+<form action="${pageContext.request.contextPath}/servlet2" method = "GET">
+  <label for="number">Enter your number</label><br>
+  <input type="text" id="number" name="field_number"><br>
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>
