@@ -105,8 +105,9 @@ public class Servlet1 extends HttpServlet
         m_date = date_format.format(temp);
 
         //don't forget to change the paths to my .xml and .dtd (in servlet1_data_format.dtd) files
-        String path = "/Users/jackyokov/IdeaProjects/Java2EE/src/main/webapp/files/xml/servlet1_data.xml";
-        boolean res = readXML(path);
+        String path_windows = "C:\\Users\\nikit\\IdeaProjects\\Java2EE\\src\\main\\webapp\\files\\xml\\servlet1_data.xml";
+        //String path = "/Users/jackyokov/IdeaProjects/Java2EE/src/main/webapp/files/xml/servlet1_data.xml";
+        boolean res = readXML(path_windows);
         System.out.println(res);
     }
 

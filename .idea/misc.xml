@@ -10,6 +10,9 @@
       </list>
     </option>
   </component>
+  <component name="ProjectResources">
+    <resource url="C:\Users\nikit\IdeaProjects\Java2EE\src\main\webapp\files\xml\servlet1_data.dtd" location="$PROJECT_DIR$/src/main/webapp/files/dtd/servlet1_data_format.dtd" />
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_18" default="true" project-jdk-name="18" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
