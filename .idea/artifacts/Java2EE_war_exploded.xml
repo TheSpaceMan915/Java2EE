@@ -13,6 +13,14 @@
         <element id="directory" name="classes">
           <element id="module-output" name="Java2EE" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.openjfx:javafx-controls:18.0.2" />
+          <element id="library" level="project" name="Maven: org.openjfx:javafx-controls:mac-aarch64:18.0.2" />
+          <element id="library" level="project" name="Maven: org.openjfx:javafx-graphics:18.0.2" />
+          <element id="library" level="project" name="Maven: org.openjfx:javafx-graphics:mac-aarch64:18.0.2" />
+          <element id="library" level="project" name="Maven: org.openjfx:javafx-base:18.0.2" />
+          <element id="library" level="project" name="Maven: org.openjfx:javafx-base:mac-aarch64:18.0.2" />
+        </element>
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/target/Java2EE-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />

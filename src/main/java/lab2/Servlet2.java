@@ -8,8 +8,8 @@ import java.util.TimeZone;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
-@WebServlet("/servlet2")
-public class Task2 extends HttpServlet {
+@WebServlet(name = "Session" ,value = "/task2")
+public class Servlet2 extends HttpServlet {
     private static PrintWriter m_writer;
     private static String m_user_id;
     private static String m_user_key;

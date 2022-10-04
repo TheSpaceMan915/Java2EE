@@ -19,8 +19,8 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
 //value is the URL pattern of the servlet
-@WebServlet("/servlet1")
-public class Task1 extends HttpServlet
+@WebServlet(name="Authentication", value = "/task1")
+public class Servlet1 extends HttpServlet
 {
     private static PrintWriter m_writer;
     private static String m_login;
@@ -104,8 +104,8 @@ public class Task1 extends HttpServlet
         date_format.setTimeZone(TimeZone.getDefault());
         m_date = date_format.format(temp);
 
-        //don't forget to change the paths to my .xml and .dtd (in task1_data_format.dtd) files
-        String path = "/Users/jackyokov/IdeaProjects/Java2EE/src/main/webapp/files/xml/task1_data.xml";
+        //don't forget to change the paths to my .xml and .dtd (in servlet1_data_format.dtd) files
+        String path = "/Users/jackyokov/IdeaProjects/Java2EE/src/main/webapp/files/xml/servlet1_data.xml";
         boolean res = readXML(path);
         System.out.println(res);
     }
