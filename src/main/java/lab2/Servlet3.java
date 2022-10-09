@@ -1,5 +1,4 @@
-package lab2.task3;
-
+package lab2;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -12,8 +11,11 @@ import org.xml.sax.SAXException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -21,7 +23,7 @@ import java.util.List;
 import java.util.TimeZone;
 
 //value is the URL pattern of the servlet
-@WebServlet(name="Authentication", value = "/task3")
+@WebServlet(name="WebViewer", value = "/task3")
 public class Servlet3 extends HttpServlet
 {
     private static PrintWriter m_writer;
@@ -42,7 +44,7 @@ public class Servlet3 extends HttpServlet
         return value;
     }
 
-    public boolean readXML(String xml)
+    public boolean readXML(File xml)
     {
         Document dom;
         // Make an  instance of the DocumentBuilderFactory
@@ -107,9 +109,18 @@ public class Servlet3 extends HttpServlet
         m_date = date_format.format(temp);
 
         //don't forget to change the paths to my .xml and .dtd (in servlet1_data_format.dtd) files
-        String path = "/Users/jackyokov/IdeaProjects/Java2EE/src/main/webapp/files/xml/servlet1_data.xml";
-        boolean res = readXML(path);
-        System.out.println(res);
+        File file_path = new File("/Users/jackyokov/IdeaProjects/Java2EE/src/main/webapp/files/xml/servlet1_data.xml");
+
+        /*
+        try
+        {
+            //File file_xml = new File(new URI("https://cbr.ru/scripts/XML_daily.asp?date_req=02/03/2002"));
+            //readXML(file_xml);
+        }
+        catch (URISyntaxException e)
+        { e.printStackTrace(); }
+         */
+        boolean res = readXML(file_path);
     }
 
     @Override
@@ -129,17 +140,20 @@ public class Servlet3 extends HttpServlet
             if (input_login.equals(m_login))
             {
                 if (input_password.equals(m_password))
-                { printMessage("Success!\n" + m_date); }
+                {
+                    printMessage("Success!<br>" + m_date + "<br>");
+                    m_writer.println("The GET method has worked");
+                }
                 else
                 {
                     m_counter++;
-                    printMessage("The password is incorrect\n" + "Try number " + m_counter);
+                    printMessage("The password is incorrect<br>" + "Try number " + m_counter);
                 }
             }
             else
             {
                 m_counter++;
-                printMessage("The login is incorrect\n" + "Try number " + m_counter);
+                printMessage("The login is incorrect<br>" + "Try number " + m_counter);
             }
         }
         else
@@ -149,37 +163,44 @@ public class Servlet3 extends HttpServlet
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException
     {
-        response.setContentType("text/html");
-
-        //get the user data from the request
-        String input_login = request.getParameter("field_login");
-        String input_password = request.getParameter("field_password");
-
-        m_writer = response.getWriter();
-
-
-        if (m_counter < 3)
         {
-            if (input_login.equals(m_login))
+            response.setContentType("text/html");
+
+            //get the user data from the request
+            String input_login = request.getParameter("field_login");
+            String input_password = request.getParameter("field_password");
+
+            m_writer = response.getWriter();
+
+
+            if (m_counter < 3)
             {
-                if (input_password.equals(m_password))
-                { printMessage("Success!\n" + m_date); }
+                if (input_login.equals(m_login))
+                {
+                    if (input_password.equals(m_password))
+                    {
+                        printMessage("Success!<br>" + m_date + "<br>");
+                        m_writer.println("The POST method has worked");
+                    }
+                    else
+                    {
+                        m_counter++;
+                        printMessage("The password is incorrect<br>" + "Try number " + m_counter);
+                    }
+                }
                 else
                 {
                     m_counter++;
-                    printMessage("The password is incorrect\n" + "Try number " + m_counter);
+                    printMessage("The login is incorrect<br>" + "Try number " + m_counter);
                 }
             }
             else
-            {
-                m_counter++;
-                printMessage("The login is incorrect\n" + "Try number " + m_counter);
-            }
+            { printMessage("You shall not paaaaaaass"); }
         }
-        else
-        { printMessage("You shall not paaaaaaass"); }
     }
 
-    public void destroy() {
+    public void destroy()
+    {
+
     }
 }

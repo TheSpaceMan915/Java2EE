@@ -5,9 +5,12 @@
 </head>
 <body>
 <h1 style="text-align:center">Authentication</h1>
+<br>
+<br>
 
 <!--write in the action attribute the URL pattern of the servlet without /-->
-<form action="${pageContext.request.contextPath}/task3" method = "POST">
+<p> Send info using GET method</p>
+<form action="${pageContext.request.contextPath}/task3">
   <label for="log">Login</label><br>
   <input type="text" id="log" name="field_login"><br>
 
@@ -15,6 +18,19 @@
   <input type="password" id="pass" name="field_password"><br>
   <input type="submit" value="Enter">
 </form>
+<br>
+<br>
+
+<p> Send info using POST method</p>
+<form action="${pageContext.request.contextPath}/task3" method = "POST">
+  <label for="log2">Login</label><br>
+  <input type="text" id="log2" name="field_login"><br>
+
+  <label for="pass2">Password</label><br>
+  <input type="password" id="pass2" name="field_password"><br>
+  <input type="submit" value="Enter">
+</form>
+
 </body>
 </html>
 
