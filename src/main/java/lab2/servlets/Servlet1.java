@@ -1,8 +1,14 @@
-package lab2;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+package lab2.servlets;
+
+import java.io.*;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.TimeZone;
+
+import jakarta.servlet.http.*;
+import jakarta.servlet.annotation.*;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
@@ -11,20 +17,10 @@ import org.xml.sax.SAXException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import java.io.File;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.TimeZone;
 
 //value is the URL pattern of the servlet
-@WebServlet(name="WebViewer", value = "/task3")
-public class Servlet3 extends HttpServlet
+@WebServlet(name="Authentication", value = "/task1")
+public class Servlet1 extends HttpServlet
 {
     private static PrintWriter m_writer;
     private static String m_login;
@@ -44,7 +40,7 @@ public class Servlet3 extends HttpServlet
         return value;
     }
 
-    public boolean readXML(File xml)
+    public boolean readXML(String xml)
     {
         Document dom;
         // Make an  instance of the DocumentBuilderFactory
@@ -109,22 +105,14 @@ public class Servlet3 extends HttpServlet
         m_date = date_format.format(temp);
 
         //don't forget to change the paths to my .xml and .dtd (in servlet1_data_format.dtd) files
-        File file_path = new File("/Users/jackyokov/IdeaProjects/Java2EE/src/main/webapp/files/xml/servlet1_data.xml");
-
-        /*
-        try
-        {
-            //File file_xml = new File(new URI("https://cbr.ru/scripts/XML_daily.asp?date_req=02/03/2002"));
-            //readXML(file_xml);
-        }
-        catch (URISyntaxException e)
-        { e.printStackTrace(); }
-         */
-        boolean res = readXML(file_path);
+        String path_windows = "C:\\Users\\nikit\\IdeaProjects\\Java2EE\\src\\main\\webapp\\files\\xml\\servlet1_data.xml";
+        //String path = "/Users/jackyokov/IdeaProjects/Java2EE/src/main/webapp/files/xml/servlet1_data.xml";
+        boolean res = readXML(path_windows);
+        System.out.println(res);
     }
 
     @Override
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException
+    public void doPost(HttpServletRequest request, HttpServletResponse response)
     {
         response.setContentType("text/html");
 
@@ -132,75 +120,41 @@ public class Servlet3 extends HttpServlet
         String input_login = request.getParameter("field_login");
         String input_password = request.getParameter("field_password");
 
-        m_writer = response.getWriter();
-
-
-        if (m_counter < 3)
+        try
         {
-            if (input_login.equals(m_login))
-            {
-                if (input_password.equals(m_password))
-                {
-                    printMessage("Success!<br>" + m_date + "<br>");
-                    m_writer.println("The GET method has worked");
-                }
-                else
-                {
-                    m_counter++;
-                    printMessage("The password is incorrect<br>" + "Try number " + m_counter);
-                }
-            }
-            else
-            {
-                m_counter++;
-                printMessage("The login is incorrect<br>" + "Try number " + m_counter);
-            }
-        }
-        else
-        { printMessage("You shall not paaaaaaass"); }
-    }
-
-    @Override
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException
-    {
-        {
-            response.setContentType("text/html");
-
-            //get the user data from the request
-            String input_login = request.getParameter("field_login");
-            String input_password = request.getParameter("field_password");
-
             m_writer = response.getWriter();
-
-
             if (m_counter < 3)
             {
                 if (input_login.equals(m_login))
                 {
                     if (input_password.equals(m_password))
-                    {
-                        printMessage("Success!<br>" + m_date + "<br>");
-                        m_writer.println("The POST method has worked");
-                    }
+                    { printMessage("Success!\n" + m_date); }
                     else
                     {
                         m_counter++;
-                        printMessage("The password is incorrect<br>" + "Try number " + m_counter);
+                        printMessage("The password is incorrect\n" + "Try number " + m_counter);
                     }
                 }
                 else
                 {
                     m_counter++;
-                    printMessage("The login is incorrect<br>" + "Try number " + m_counter);
+                    printMessage("The login is incorrect\n" + "Try number " + m_counter);
                 }
             }
             else
-            { printMessage("You shall not paaaaaaass"); }
+            {
+                printMessage("You shall not paaaaaaass");
+            }
         }
+        catch(IOException exep)
+        {
+            System.err.println("There's a problem with the writer");
+            exep.printStackTrace();
+        }
+
+
     }
 
-    public void destroy()
-    {
-
+    public void destroy() {
     }
 }

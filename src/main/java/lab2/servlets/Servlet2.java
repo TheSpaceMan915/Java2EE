@@ -1,4 +1,4 @@
-package lab2;
+package lab2.servlets;
 
 import java.io.*;
 import java.text.SimpleDateFormat;

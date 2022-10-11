@@ -17,8 +17,18 @@
   <br><br>
   <p>
     Date format: day/month/year<br>
-    If you'd like to see prices for a particular day, fill the field "Date1" only<br>
-    If you'd like to see prices for a period of time, fill both fields <br>
+    If you'd like to see currency prices for a particular day, fill the field "Date1" only.<br>
+    If you'd like to see prices for a period of time: <br>
+    1) fill both date fields <br>
+    2) enter the id of the currency in the id field <br><br>
+
+    id currency:<br>
+    GBP - R01035 <br>
+    USD - R01235 <br>
+    EUR - R01239<br><br>
+
+    one day - 2021 year works <br>
+    a period of time currency and metalls: the dates 03.03.2001 - dd.mm.2001 work
   </p>
   <br>
 
@@ -27,6 +37,9 @@
 
   <label for="date2">Date2</label><br>
   <input type="text" id="date2" name="field_date2"><br>
+
+  <label for="id">Id</label><br>
+  <input type="text" id="id" name ="field_id"><br>
   <input type="submit" value="Enter">
 </form>
 
