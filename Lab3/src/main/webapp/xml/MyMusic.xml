@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Music>
+    <Song id="153">
+        <title>Fade Away</title>
+        <artist>Oasis</artist>
+    </Song>
+    <Song id="932">
+        <title>Don't look back in anger</title>
+        <artist>Oasis</artist>
+    </Song>
+    <Song id="394">
+        <title>Godzilla</title>
+        <artist>Eminem</artist>
+    </Song>
+    <Song id="493">
+        <title>Venom</title>
+        <artist>Eminem</artist>
+    </Song>
+    <Song id="523">
+        <title>Till I Collapse</title>
+        <artist>Eminem</artist>
+    </Song>
+    <Song id="670">
+        <title>Hello</title>
+        <artist>Adele</artist>
+    </Song>
+    <Song id="66">
+        <title>King Of Pain</title>
+        <artist>The Police</artist>
+    </Song>
+    <Song id="356">
+        <title>Every Little Thing She Does Is Magic</title>
+        <artist>The Police</artist>
+    </Song>
+    <Song id="165">
+        <title>Everybody Wants To Rule The World</title>
+        <artist>Tears For Fears</artist>
+    </Song>
+    <Song id="185">
+        <title>Waka Waka</title>
+        <artist>Shakira</artist>
+    </Song>
+    <Song id="256">
+        <title>La La La</title>
+        <artist>Shakira</artist>
+    </Song>
+    <Song id="417">
+        <title>They Don't Care About Us</title>
+        <artist>Michael Jackson</artist>
+    </Song>
+    <Song id="113">
+        <title>Smooth Criminal</title>
+        <artist>Michael Jackson</artist>
+    </Song>
+    <Song id="829">
+        <title>Billie Jean</title>
+        <artist>Michael Jackson</artist>
+    </Song>
+</Music>
