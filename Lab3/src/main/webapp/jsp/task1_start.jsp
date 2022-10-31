@@ -17,8 +17,8 @@
 
 <br>Main menu<br>
 <ul>
-    <li><a href="html/task1_add_music.html">Add music</a> </li>
-    <li><a href="html/task1_delete_music.html">Delete music</a> </li>
+    <li><a href="../html/task1_add_music.html">Add music</a> </li>
+    <li><a href="../html/task1_delete_music.html">Delete music</a> </li>
 </ul>
 </body>
 </html>

@@ -58,6 +58,9 @@ public class ServletProcessor extends HttpServlet
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
+        //setting the encoding in case we want to write title and artist in Russian
+        request.setCharacterEncoding("UTF-8");
+
         MusicCollection music_collection = readXml();
         List<MySong> list = music_collection.getListSongs();
         String input_title = request.getParameter("field_title");
@@ -92,6 +95,9 @@ public class ServletProcessor extends HttpServlet
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
+        //setting the encoding in case we want to write title and artist in Russian
+        request.setCharacterEncoding("UTF-8");
+
         //getting the parameters for a new song object
         String input_title = request.getParameter("field_title");
         String input_artist = request.getParameter("field_artist");

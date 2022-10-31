@@ -4,12 +4,12 @@ import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
-import javax.swing.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
-@WebServlet(name = "ServletViewer", value = "/ServletViewer")
+//sends the data to the html page
+@WebServlet(name = "Servlet2", value = "/ServletViewer")
 public class ServletViewer extends HttpServlet
 {
     private PrintWriter m_writer;
