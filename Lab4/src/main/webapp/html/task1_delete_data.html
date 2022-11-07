@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    h1 {color: darkmagenta; text-align: center}
+  </style>
+    <meta charset="UTF-8">
+    <title>Delete Data</title>
+</head>
+<body>
+<h1>Delete Item</h1>
+
+<form action="../ServletController1" method = "POST">
+  <label for="item_id">Item Id</label><br>
+  <input type="text" id="item_id" name="field_id"><br>
+
+  <input type="hidden" name="action" value="Delete">
+  <input type="submit" value="Submit">
+</form>
+<br><br>
+
+<a href = "http://localhost:8080/Lab4-1.0-SNAPSHOT/">Go back</a>
+
+
+</body>
+</html>

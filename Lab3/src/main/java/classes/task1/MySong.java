@@ -15,7 +15,6 @@ public class MySong implements Serializable
     private String m_artist;
 
 
-
     public MySong() {}
 
     public MySong(String id, String title, String artist)

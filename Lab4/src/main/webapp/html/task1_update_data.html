@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        h1 {color: blueviolet; text-align: center}
+    </style>
+    <meta charset="UTF-8">
+    <title>Update Data</title>
+</head>
+<body>
+<h1>Update Name</h1>
+
+<form action="../ServletController1" method = "POST">
+    <label for="item_id">Item Id</label><br>
+    <input type="text" id="item_id" name="field_id"><br>
+
+    <label for="item_name">New Item Name</label><br>
+    <input type="text" id="item_name" name="field_item_name"><br>
+
+    <input type="hidden" name="action" value="Update">
+    <input type="submit" value="Submit">
+</form>
+<br><br>
+
+<a href = "http://localhost:8080/Lab4-1.0-SNAPSHOT/">Go back</a>
+
+</body>
+</html>
