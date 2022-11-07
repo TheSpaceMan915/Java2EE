@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Config>
-        <url>jdbc:postgresql://192.168.1.65:5432/</url>
+<Config name_db="lab4_db_created">
+        <url1>jdbc:postgresql://192.168.1.65:5432/lab4_db</url1>
+        <url2>jdbc:postgresql://192.168.1.65:5432/</url2>
         <user>postgres</user>
         <password>954!BindDom</password>
 </Config>

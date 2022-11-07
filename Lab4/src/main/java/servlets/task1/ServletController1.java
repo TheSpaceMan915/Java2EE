@@ -9,10 +9,8 @@ import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Unmarshaller;
 
-import javax.swing.plaf.nimbus.State;
 import java.io.File;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -20,18 +18,15 @@ import java.util.List;
 @WebServlet(name = "ServletController1", value = "/ServletController1")
 public class ServletController1 extends HttpServlet
 {
-    private final String m_url1 = "jdbc:postgresql://192.168.1.65:5432/lab4_db";
+    private String m_name_db;
+    private String m_url1;
+    private String m_url2;
+    private String m_user;
+    private String m_password;
+    private File m_file_xml;
 
-    private final String m_url2 = "jdbc:postgresql://192.168.1.65:5432/";
 
-    private final String m_user = "postgres";
-
-    private final String m_password = "954!BindDom";
-
-    private final File m_file_xml = new File("");
-    
-
-    public Configuration readXml()
+    private Configuration readXml()
     {
         Configuration temp = null;
         try
@@ -49,17 +44,35 @@ public class ServletController1 extends HttpServlet
     }
 
 
+    @Override
+    public void init()
+    {
+        //reading the xml file and initialising the strings
+         m_file_xml= new File("/Users/jackyokov/IdeaProjects/Java2EE/Lab4/src/main/webapp/xml/conf.xml");
+        Configuration config = readXml();
+
+        m_name_db = config.getNameDb();
+        m_url1 = config.getUrl1();
+        m_url2 = config.getUrl2();
+        m_user = config.getUser();
+        m_password = config.getPassword();
+    }
+
+
     private Connection createDatabase()
     {
         Connection conn = null;
         try
         {
             conn = DriverManager.getConnection(m_url2,m_user,m_password);
+
+            //creating a database
             Statement st = conn.createStatement();
-            st.executeUpdate("CREATE DATABASE lab4_db_created");
+            st.executeUpdate("CREATE DATABASE " + m_name_db);
             st.close();
 
-            conn = DriverManager.getConnection(m_url2 + "lab4_db_created",m_user,m_password);
+            //creating the tables
+            conn = DriverManager.getConnection(m_url2 + m_name_db,m_user,m_password);
             Statement st_new_db = conn.createStatement();
             st_new_db.executeUpdate(
                     "CREATE TABLE category" +
@@ -101,11 +114,11 @@ public class ServletController1 extends HttpServlet
     {
         Connection connection = null;
         try
-        { connection = DriverManager.getConnection(m_url1 + "3",m_user,m_password); }
+        { connection = DriverManager.getConnection(m_url1,m_user,m_password); }
         catch (SQLException exep)
         {
             exep.printStackTrace();
-            log("getConnection()1 has failed. There's no such database");
+            log("getConnection() has failed. There's no such database");
 
             //creating a database
             connection = createDatabase();
