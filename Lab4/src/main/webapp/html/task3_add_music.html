@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /*body {background-color: antiquewhite}*/
+       h1 {text-align: center; color:coral;}
+    </style>
+    <meta charset="UTF-8">
+    <title>Add music</title>
+</head>
+<body>
+<h1>Add music</h1>
+
+<!--write in the action attribute the URL pattern of the servlet without /-->
+<form action="../ServletController2" method = "POST">
+    <label for="title">Title</label><br>
+    <input type="text" id="title" name="field_title"><br>
+
+    <label for="first_name">Artist's First Name</label><br>
+    <input type="text" id="first_name" name="field_first_name"><br>
+
+    <label for="second_name">Artist's Second Name</label><br>
+    <input type="text" id="second_name" name="field_second_name"><br>
+    <input type="hidden" name="action" value="Add">
+    <input type="submit" value="Enter">
+</form>
+
+<br><br>
+<a href = "http://localhost:8080/Lab4-1.0-SNAPSHOT/">Go back</a>
+</body>
+</html>

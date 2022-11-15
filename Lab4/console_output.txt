@@ -1,10 +1,10 @@
-Waiting for domain1 to start ....Connected to server
-
+Waiting for domain1 to start ....
 Successfully started the domain : domain1
 domain  Location: /Applications/glassfish6/glassfish/domains/domain1
 Log File: /Applications/glassfish6/glassfish/domains/domain1/logs/server.log
 Admin Port: 4848
 Command start-domain executed successfully.
+Connected to server
 Waiting for the domain to stop .
 Command stop-domain executed successfully.
 Disconnected from server
