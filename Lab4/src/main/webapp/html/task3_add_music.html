@@ -12,7 +12,7 @@
 <h1>Add music</h1>
 
 <!--write in the action attribute the URL pattern of the servlet without /-->
-<form action="../ServletController2" method = "POST">
+<form action="../ServletController3" method = "POST">
     <label for="title">Title</label><br>
     <input type="text" id="title" name="field_title"><br>
 
@@ -24,8 +24,9 @@
     <input type="hidden" name="action" value="Add">
     <input type="submit" value="Enter">
 </form>
-
 <br><br>
-<a href = "http://localhost:8080/Lab4-1.0-SNAPSHOT/">Go back</a>
+
+<button type=button name=back onclick=history.back()>Go back</button>
+
 </body>
 </html>

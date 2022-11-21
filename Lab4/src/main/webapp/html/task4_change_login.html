@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        h1 {color: coral; text-align: center}
+    </style>
+    <meta charset="UTF-8">
+    <title>Change Login</title>
+</head>
+<body>
+
+<h1>Change login</h1>
+
+<form action="../ServletController3" method = "POST">
+  <label for="user_id">User's id</label><br>
+  <input type="text" id="user_id" name="field_user_id"><br>
+
+  <label for="login">New login</label><br>
+  <input type="text" id="login" name="field_login"><br>
+
+  <input type="hidden" name="action" value="Change login">
+  <input type="submit" value="Submit">
+</form>
+<br><br>
+
+<button type="button" name="back" onclick="history.back()">Go back</button>
+
+</body>
+</html>

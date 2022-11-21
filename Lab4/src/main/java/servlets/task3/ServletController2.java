@@ -72,10 +72,11 @@ public class ServletController2 extends HttpServlet
     }
 
 
-    //looking for the actor using Criteria API
     private static Artist findArtist(String first_name, String second_name)
     {
-/*        final EntityManager manager = m_factory.createEntityManager();
+/*
+        //looking for the actor using Criteria API
+        final EntityManager manager = m_factory.createEntityManager();
         CriteriaBuilder criteria__builder = manager.getCriteriaBuilder();
 
         CriteriaQuery<Artist> query = criteria__builder.createQuery(Artist.class);

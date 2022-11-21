@@ -5,20 +5,21 @@
         h1 {text-align: center; color: salmon;}
     </style>
     <meta charset="UTF-8">
-    <title>Delete music</title>
+    <title>Delete Music</title>
 </head>
 <body>
 <h1>Delete music</h1>
 
-<form action="../ServletController2" method="POST">
+<form action="../ServletController3" method="POST">
     <label for="song_id">Song Id</label><br>
     <input type="text" id="song_id" name="field_id"><br>
 
     <input type="hidden" name="action" value="Delete">
     <input type="submit" value="Enter">
 </form>
-
 <br><br>
-<a href = "http://localhost:8080/Lab4-1.0-SNAPSHOT/">Go back</a>
+
+<button type=button name=back onclick=history.back()>Go back</button>
+
 </body>
 </html>

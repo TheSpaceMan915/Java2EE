@@ -48,7 +48,7 @@ public class ServletController1 extends HttpServlet
     public void init()
     {
         //reading the xml file and initialising the strings
-         m_file_xml= new File("/Users/jackyokov/IdeaProjects/Java2EE/Lab4/src/main/webapp/xml/conf.xml");
+         m_file_xml= new File("/Users/jackyokov/IdeaProjects/Java2EE/Lab4/src/main/webapp/xml/task2_conf.xml");
         Configuration config = readXml();
 
         m_name_db = config.getNameDb();

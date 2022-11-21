@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <style>
@@ -14,5 +15,9 @@
     <li><a href="html/task3_add_music.html">Add music</a> </li>
     <li><a href="html/task3_delete_music.html">Delete music</a> </li>
 </ul>
+<br><br>
+
+<button type="button" name="back" onclick="history.back()">Go back</button>
+
 </body>
 </html>
