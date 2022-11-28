@@ -10,12 +10,16 @@
         <option value="$PROJECT_DIR$/Lab2/pom.xml" />
         <option value="$PROJECT_DIR$/Lab3/pom.xml" />
         <option value="$PROJECT_DIR$/Lab4/pom.xml" />
+        <option value="$PROJECT_DIR$/Lab5/pom.xml" />
+        <option value="$PROJECT_DIR$/Lab5_try2/pom.xml" />
+        <option value="$PROJECT_DIR$/Lab5_try3/pom.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectResources">
     <resource url="$PROJECT_DIR$/src/main/webapp/files/dtd/servlet1_data_format.dtd" location="$PROJECT_DIR$/src/main/webapp/files/dtd/servlet1_data_format.dtd" />
     <resource url="C:\Users\nikit\IdeaProjects\Java2EE\src\main\webapp\files\xml\servlet1_data.dtd" location="$PROJECT_DIR$/src/main/webapp/files/dtd/servlet1_data_format.dtd" />
+    <resource url="http://xmlns.jcp.org/jsf/html" location="$APPLICATION_HOME_DIR$/lib/app.jar!/standardSchemas/xhtml.dtd" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_18" default="true" project-jdk-name="18" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />

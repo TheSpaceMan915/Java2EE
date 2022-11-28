@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebContextManager">
+    <option name="state">
+      <map>
+        <entry key="file://$PROJECT_DIR$/Lab5/src/main/webapp/jsf/task1_page.xhtml" value="file://$PROJECT_DIR$/Lab5/src/main/webapp/jsf" />
+        <entry key="file://$PROJECT_DIR$/Lab5/src/main/webapp/xhtml/named_input.xhtml" value="file://$PROJECT_DIR$/Lab5/src/main/webapp/xhtml" />
+      </map>
+    </option>
+  </component>
+</project>
