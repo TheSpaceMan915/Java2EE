@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:cc="http://xmlns.jcp.org/jsf/composite"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+<h:body>
+
+<cc:interface>
+    <cc:attribute name="login"/>
+    <cc:attribute name="password"/>
+    <cc:attribute name="email"/>
+    <cc:attribute name="phone"/>
+    <cc:attribute name="action"
+    method-signature="void action(jakarta.faces.event.ActionEvent)"
+    targets="ccform:button_id"/>
+</cc:interface>
+
+<cc:implementation>
+    <h:form id="ccform">
+        <h:panelGrid columns="3">
+            <h:outputText value="Login"/>
+            <h:inputText value="#{cc.attrs.login}" id="field_login_id" required="true" label="Field login"/>
+            <h:message for="field_login_id" style="color:orangered"/>
+
+            <h:outputText value="Password"/>
+            <h:inputText value="#{cc.attrs.password}" id="field_password_id" required="true" label="Field password"/>
+            <h:message for="field_password_id" style="color:orangered"/>
+
+            <h:outputText value="Phone number"/>
+            <h:inputText value="#{cc.attrs.phone}" id="field_phone_id"  label="Field phone number">
+                <f:validator validatorId="phone_number_validator"/>
+            </h:inputText>
+            <h:message for="field_phone_id" style="color:orangered"/>
+
+            <h:outputText value="E-mail"/>
+            <h:inputText value="#{cc.attrs.email}" id="field_email_id"  label="Field email">
+                <f:validator validatorId="email_validator"/>
+            </h:inputText>
+            <h:message for="field_email_id" style="color:orangered"/>
+        </h:panelGrid>
+
+        <h:commandButton id="button_id" value="Submit"/>
+    </h:form>
+</cc:implementation>
+
+</h:body>
+</html>

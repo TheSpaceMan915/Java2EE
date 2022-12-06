@@ -1,0 +1,28 @@
+<ui:composition
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:f="http://xmlns.jcp.org/jsf/core"
+        xmlns:h="http://xmlns.jcp.org/jsf/html"
+        xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+        xmlns:my="http://xmlns.jcp.org/jsf/composite/components">
+
+
+    <h1 style="color:blueviolet;text-align: center">Authentication</h1>
+
+<h:form>
+    <h:panelGrid columns="3">
+        <h:outputText value="Login"/>
+        <h:inputText id="field_login_id" value="#{userModel.userLogin}" required="true" label="Field login"/>
+        <h:message for="field_password_id" style="color: red"/>
+
+        <h:outputText value="Password"/>
+        <h:inputText id="field_password_id" value="#{userModel.userPassword}" required="true" label="Field password"/>
+        <h:message for="field_password_id" style="color: red"/>
+    </h:panelGrid>
+
+    <h:commandButton id="id_button" value="Submit" action="#{userModel.redirectUser()}"/>
+</h:form>
+<br/><br/>
+
+<h:link value="Sign up" outcome="/jsf/task2/signing_up.xhtml"/>
+
+</ui:composition>

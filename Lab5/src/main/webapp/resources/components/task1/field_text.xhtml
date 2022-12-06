@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:cc="http://xmlns.jcp.org/jsf/composite"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+<h:body>
+
+<cc:interface>
+    <cc:attribute name="text"/>
+    <cc:attribute name="action"
+    method-signature="void action(jakarta.faces.event.ActionEvent)"
+    targets="ccform:id_button"/>
+</cc:interface>
+
+<cc:implementation>
+    <h:form id="ccform">
+        <h:panelGrid columns="3">
+            <h:outputText value="Enter a characher from The Lord of the Rings"/>
+            <h:inputText value="#{cc.attrs.field}" id="id_field" required="true" label="You shall not paaaaaass name"/>
+            <h:message for="id_field" style="color:orangered"/>
+        </h:panelGrid>
+        <h:commandButton id="id_button" value="Submit"/>
+    </h:form>
+</cc:implementation>
+
+</h:body>
+</html>

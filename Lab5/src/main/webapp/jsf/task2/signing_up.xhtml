@@ -1,0 +1,16 @@
+<ui:composition
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:f="http://xmlns.jcp.org/jsf/core"
+        xmlns:h="http://xmlns.jcp.org/jsf/html"
+        xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+        xmlns:my="http://xmlns.jcp.org/jsf/composite/components/task2">
+
+
+   <h1 style="color:blueviolet;text-align: center">Signing up</h1>
+
+   <my:signer_up login="#{userModel.userLogin}" password="#{userModel.userPassword}" email="#{userModel.userEmail}" phone="#{userModel.userPhone}" action="#{userModel.signUpUser()}"/>
+<br/><br/>
+
+   <h:link value="Authenticate" outcome="/jsf/task2/authentication.xhtml"/>
+
+</ui:composition>
