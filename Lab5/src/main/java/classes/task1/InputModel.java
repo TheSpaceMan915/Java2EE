@@ -10,7 +10,6 @@ public class InputModel implements Serializable
 {
     private String m_user_input;
     private int m_counter = 0;
-    private int number = 0;
 
 
     public String getUserInput() { return m_user_input; }
