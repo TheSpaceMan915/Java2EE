@@ -17,9 +17,6 @@ public class PhoneValidator implements Validator<String>
 
     private final int m_max_length = 20;
 
-    private final String mess = "error";
-
-
     @Override
     public void validate(FacesContext context, UIComponent component, String str) throws ValidationException
     {
