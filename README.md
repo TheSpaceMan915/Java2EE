@@ -47,9 +47,12 @@
 
 
 ## Setup
-What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
-
-Proceed to describe how to install / setup one's local environment / get started with the project.
+* Download the repo
+* Create a GlassFish local run configuration
+* In the configuration set "Server Domain" field to "domain1" and "Username" field to "admin"
+* In the configuration choose a war archive to be deployed at the server startup
+* In the configuration change the URL according to the deployed archives
+* Access the app by the URL
 
 
 ## Usage
