@@ -1,5 +1,5 @@
 # Java2EE
-> This is a repository for a Java2EE course. There are several completed assignments in the repository on different topics such as:
+> This is a repository for a Jakarta EE course. There are several completed assignments in the repository on different topics such as:
 > * Servlets
 > * JavaServer Pages (JSP)
 > * Java XML Binding
@@ -36,9 +36,9 @@
 
 
 ## Features
+- Use Java2EE API
 - Use Hibernate
 - Use MVC design pattern
-- Awesome feature 3
 
 
 ## Screenshots
