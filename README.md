@@ -5,6 +5,7 @@
 > * JDBC API
 > * Java Persistence API (JPA)
 > * JavaServer Faces (JSF)
+<!-- > Live demo [_here_](https://www.example.com).  If you have the project hosted somewhere, include the link here. -->
 
 ## Table of Contents
 * [General Info](#general-information)
@@ -21,10 +22,9 @@
 
 
 ## General Information
-- Provide general information about your project here.
-- What problem does it (intend to) solve?
-- What is the purpose of your project?
-- Why did you undertake it?
+- This is a training repository.
+- The purpose of this repository is to help me learn more about Java2EE.
+- I undertook the Java2EE course during my undergraduate degree.
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
 
