@@ -19,8 +19,6 @@ public class UserModel  implements Serializable
 
     private String m_user_phone_number;
 
-    private String m_user_code;
-
     private final List<User> m_list_users = new ArrayList<>();
     {
         //filling the list with users
