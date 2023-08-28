@@ -1,11 +1,11 @@
 # Java2EE
 > This is a repository for a Jakarta EE course. There are several completed assignments in the repository on different topics such as:
-> * Servlets
-> * JavaServer Pages (JSP)
-> * Java XML Binding
-> * JDBC API
-> * Java Persistence API (JPA)
-> * JavaServer Faces (JSF)
+> * Servlets;
+> * JavaServer Pages (JSP);
+> * Java XML Binding;
+> * JDBC API;
+> * Java Persistence API (JPA);
+> * JavaServer Faces (JSF).
 <!-- > Live demo [_here_](https://www.example.com).  If you have the project hosted somewhere, include the link here. -->
 
 
@@ -22,22 +22,22 @@
 
 
 ## General Information
-- This is a training repository.
-- The purpose of this repository is to help me learn more about Java2EE.
+- This is a training repository;
+- The purpose of this repository is to help me learn more about Java2EE;
 - I undertook the Java2EE course during my undergraduate degree.
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
 
 ## Technologies Used
-- Java 18
-- GlassFish 6.2.5
-- PostgreSQL 15
+- Java 18;
+- GlassFish 6.2.5;
+- PostgreSQL 15.
 
 
 ## Features
-- Use Java2EE API
-- Use Hibernate
-- Use MVC design pattern
+- Use Java2EE API;
+- Use Hibernate;
+- Use MVC design pattern.
 
 
 ## Screenshots
@@ -51,12 +51,12 @@
 
 
 ## Setup
-* Download the repo
-* Create a GlassFish local run configuration
-* In the configuration set "Server Domain" field to "domain1" and "Username" field to "admin"
-* In the configuration choose a war archive to be deployed at the server startup
-* In the configuration change the URL according to the deployed archives
-* Access the app by the URL
+* Download the repo;
+* Create a GlassFish local run configuration;
+* In the configuration set "Server Domain" field to "domain1" and "Username" field to "admin";
+* In the configuration choose a war archive to be deployed at the server startup;
+* In the configuration change the URL according to the deployed archives;
+* Access the app by the URL.
 
 
 ## Usage
