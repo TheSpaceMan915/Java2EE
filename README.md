@@ -42,7 +42,12 @@
 
 
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
+### Currency Rate Tracker
+![Currency Rate Tracker](https://imgur.com/kTVlWtT)
+### Music Collection App
+![Music Collection App](https://imgur.com/EgE86yL)
+### Item Catalogue App
+![Item Catalogue App](https://imgur.com/go5ruh8)
 <!-- If you have screenshots you'd like to share, include them here. -->
 
 
