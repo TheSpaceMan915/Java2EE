@@ -13,7 +13,6 @@ public class Configuration
     private String m_url2;
     private String m_user;
     private String m_password;
-    private String m_code;
 
 
     public Configuration() {}
