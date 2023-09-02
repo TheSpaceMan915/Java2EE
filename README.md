@@ -42,16 +42,24 @@
 
 ## Screenshots
 ### Currency Rate Tracker
-![Currency Rate Tracker](https://imgur.com/kTVlWtT.png)
+<p >
+    <img src="https://imgur.com/kTVlWtT.png"/>
+</p>
+
 ### Music Collection App
-![Music Collection App](https://imgur.com/EgE86yL.png)
+<p >
+    <img src="https://imgur.com/EgE86yL.png"/>
+</p>
+
 ### Item Catalogue App
-![Item Catalogue App](https://imgur.com/go5ruh8.png)
+<p >
+    <img src="https://imgur.com/go5ruh8.png"/>
+</p>
 <!-- If you have screenshots you'd like to share, include them here. -->
 
 
 ## Setup
-* Download the repo;
+* Clone this repo;
 * Create a GlassFish local run configuration;
 * In the configuration set "Server Domain" field to "domain1" and "Username" field to "admin";
 * In the configuration choose a war archive to be deployed at the server startup;
