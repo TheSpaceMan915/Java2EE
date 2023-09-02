@@ -42,19 +42,19 @@
 
 ## Screenshots
 ### Currency Rate Tracker
-<p >
+<div>
     <img src="https://imgur.com/kTVlWtT.png"/>
-</p>
+</div>
 
 ### Music Collection App
-<p >
+<div>
     <img src="https://imgur.com/EgE86yL.png"/>
-</p>
+</div>
 
 ### Item Catalogue App
-<p >
+<div>
     <img src="https://imgur.com/go5ruh8.png"/>
-</p>
+</div>
 <!-- If you have screenshots you'd like to share, include them here. -->
 
 
