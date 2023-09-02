@@ -4,9 +4,10 @@ package classes.task1;
 public class Item
 {
     private int m_id;
+    private String m_name;
+    private int price;
     private int m_category_id;
     private int m_manufacturer_id;
-    private String m_name;
 
 
     public Item(int id, int category_id,int manufacturer_id, String name)
