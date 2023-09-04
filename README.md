@@ -31,7 +31,8 @@
 ## Technologies Used
 - Java 18;
 - GlassFish 6.2.5;
-- PostgreSQL 15.
+- PostgreSQL 15;
+- IntelliJ IDEA 2022.2.5.
 
 
 ## Features
@@ -54,16 +55,25 @@
 
 
 ## Setup
+* Install IntelliJ IDEA 2022.2.5;
+* Install openjdk-18.0.2;
+* Install GlassFish 6.2.5;
+* Install PostgreSQL 15.
+
+
+## Usage
 * Clone this repo;
+* Open the project;
+* Choose a module that you'd like to run;
+* In that module find the corresponding pom.xml file (this is the file with the project dependencies);
+* By using the corresponding button reload the maven project;
+* If the module uses a database, find the corresponding persistence.xml file in that module;
+* Enter the appropriate username, password and url;
 * Create a GlassFish local run configuration;
 * In the configuration set "Server Domain" field to "domain1" and "Username" field to "admin";
 * In the configuration choose a war archive to be deployed at the server startup;
 * In the configuration change the URL according to the deployed archives;
 * Access the app by the URL.
-
-
-## Usage
-You could use this repo to learn more about Jakarta EE and see how to work with it.
 
 
 ## Project Status
