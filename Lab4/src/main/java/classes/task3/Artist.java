@@ -20,6 +20,8 @@ public class Artist
     @Column(name = "second_name")
     private String m_second_name;
 
+    private String nickname;
+
 
     @OneToMany(mappedBy = "m_artist", cascade = CascadeType.ALL)
     private Set<MySong> m_set_songs;
