@@ -21,8 +21,6 @@ public class MySong
     @Column(name = "title")
     private String m_title;
 
-    private double length;
-
     @ManyToOne
     @JoinColumn(name = "artist_id", nullable = true)
     private Artist m_artist;
