@@ -8,5 +8,5 @@ import jakarta.persistence.Table;
 @Table(name = "admin", schema = "public", catalog = "postgres")
 public class Admin extends User
 {
-  private String accessLevel;
+  
 }
