@@ -9,6 +9,7 @@ public class DatabaseManager
 {
     private static final EntityManagerFactory m_factory = Persistence.createEntityManagerFactory("lab4");
 
+    private SessionFactory factory;
 
     public static void addToDatabase(Object obj)
     {
