@@ -23,7 +23,6 @@ public class ServletController1 extends HttpServlet
     private String m_url2;
     private String m_user;
     private String m_password;
-    private String sid;
     private File m_file_xml;
 
 
