@@ -13,7 +13,6 @@ import java.util.List;
 public class ServletViewer1 extends HttpServlet
 {
     private PrintWriter m_writer;
-    private int status;
     
     private void showList(List<Item> list)
     {
