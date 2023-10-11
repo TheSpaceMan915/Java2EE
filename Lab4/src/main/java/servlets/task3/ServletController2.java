@@ -20,7 +20,8 @@ public class ServletController2 extends HttpServlet
 {
     private static final EntityManagerFactory m_factory = Persistence.createEntityManagerFactory("lab4");
 
-
+    private static final SessionFactory sessionFactory;
+    
     private static void addToDatabase(Object obj)
     {
         EntityManager manager = m_factory.createEntityManager();
