@@ -17,7 +17,8 @@ public class ServletViewer2 extends HttpServlet
 {
     private PrintWriter m_writer;
 
-
+    private String mess;
+    
     private void showList(List<MySong> list)
     {
         m_writer.println("<html>");
