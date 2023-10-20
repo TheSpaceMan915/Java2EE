@@ -22,10 +22,6 @@ public class ServletAuthenticator extends HttpServlet
     Hashcode: 1242845625
     */
     
-    private boolean authenticateDatabaseAdmin(String login, long hashcode) {
-        ;
-    }
-    
     private boolean authenticateUser(String login, long hashcode)
     {
         //getting the user
