@@ -14,9 +14,7 @@ import java.util.List;
 
 @WebServlet(name = "ServletController3", value = "/ServletController3")
 public class ServletController3 extends HttpServlet
-{
-    private String logMess = "Servlet got the message";
-    
+{    
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     { doPost(request,response);}
