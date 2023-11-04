@@ -5,14 +5,15 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-
 @XmlRootElement(name = "Music")
 public class MusicCollection implements Serializable
 {
+    private String name;
     private List<MySong> m_list_songs = new ArrayList<>();
 
-
-    public MusicCollection() {}
+    public MusicCollection() {
+        
+    }
 
     public List<MySong> getListSongs() { return m_list_songs; }
 
