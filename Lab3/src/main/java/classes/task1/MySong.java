@@ -13,7 +13,7 @@ public class MySong implements Serializable
     private String m_id;
     private String m_title;
     private String m_artist;
-
+    private double length;
 
     public MySong() {}
 
