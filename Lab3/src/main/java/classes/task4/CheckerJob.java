@@ -2,6 +2,8 @@ package classes.task4;
 
 public class CheckerJob implements Runnable
 {
+    private boolean winnerFlag;
+    
     public void checkWinner(String [][] array_str)
     {
         int counter_noughts = 0;
