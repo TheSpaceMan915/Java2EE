@@ -12,6 +12,8 @@ public class GameHelper implements Serializable
     //server_flag signals that the server has won
     private static boolean m_server_flag = false;
 
+    private static int gameStatus = 404;
+
     private static final Thread m_thread_check = new Thread(new CheckerJob());
 
     static
