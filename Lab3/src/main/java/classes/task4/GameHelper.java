@@ -7,12 +7,10 @@ public class GameHelper implements Serializable
     private static final String[][] m_arr_str = new String[m_arr_size][m_arr_size];
 
     //user_flag signals that the user has won
-    private static boolean m_user_flag = false;
+    private static boolean m_user_flag;
 
     //server_flag signals that the server has won
-    private static boolean m_server_flag = false;
-
-    private static int gameStatus = 404;
+    private static boolean m_server_flag;
 
     private static final Thread m_thread_check = new Thread(new CheckerJob());
 
