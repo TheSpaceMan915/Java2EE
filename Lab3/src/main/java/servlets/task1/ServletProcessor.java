@@ -21,6 +21,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class ServletProcessor extends HttpServlet
 {
     private static final File m_file_xml = new File("/Users/jackyokov/IdeaProjects/Java2EE/Lab3/src/main/webapp/xml/MyMusic.xml");
+    private String temp;
 
     public MusicCollection readXml()
     {
