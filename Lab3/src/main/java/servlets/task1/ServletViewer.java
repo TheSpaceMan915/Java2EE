@@ -13,7 +13,7 @@ import java.util.List;
 public class ServletViewer extends HttpServlet
 {
     private PrintWriter m_writer;
-
+    private String mess = "Page message";
 
     public void showList(List<MySong> list)
     {
