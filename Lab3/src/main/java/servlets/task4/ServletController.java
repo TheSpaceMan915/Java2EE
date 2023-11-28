@@ -11,6 +11,8 @@ import java.util.concurrent.ThreadLocalRandom;
 @WebServlet(name = "Servlet3", value = "/ServletController")
 public class ServletController extends HttpServlet
 {
+    private int userScore;
+    
     public void playServerTurn()
     {
         final int min = 0;
