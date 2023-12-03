@@ -28,7 +28,6 @@ public class Servlet1 extends HttpServlet
     private static String m_date;
     private static int m_counter;
     private List<String> m_arr_str;
-    private Timestamp authenticationDate;
 
     private String getTextValue(String def, Element doc, String tag)
     {
