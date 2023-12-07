@@ -15,8 +15,6 @@ public class Servlet2 extends HttpServlet {
     private static String m_user_key;
     private static String m_date;
     private static int m_counter;
-    private Date lastAccessDate;
-
 
     public void init()
     {
