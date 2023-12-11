@@ -32,7 +32,6 @@ public class Servlet3 extends HttpServlet
     private static String m_date;
     private static int m_counter;
     private List<String> m_arr_str;
-    private String mess = "User is not authorized";
 
     private String getTextValue(String def, Element doc, String tag)
     {
