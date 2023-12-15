@@ -22,7 +22,6 @@ import java.net.URL;
 public class Servlet4 extends HttpServlet
 {
     private PrintWriter m_writer;
-    private String currencyType;
 
     public ValCurs getCurrencyOneDay(String date)
     {
