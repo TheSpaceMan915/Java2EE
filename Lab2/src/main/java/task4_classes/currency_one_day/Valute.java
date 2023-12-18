@@ -22,6 +22,8 @@ public class Valute implements Serializable
     @XmlElement(name = "Value")
     private String m_value;
 
+    private String printedIn;
+
     public Valute() {}
 
     public String getNumCode() { return m_num_code; }
