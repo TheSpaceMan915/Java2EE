@@ -23,6 +23,8 @@ public class ValCursPeriod
     @XmlAttribute(name = "name")
     private String m_name;
 
+    private double price;
+
     @XmlElement(name = "Record")
     private final List<ValutePeriod> m_list_valutes = new ArrayList<>();
 
