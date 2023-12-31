@@ -18,11 +18,8 @@ public class ValutePeriod
 
     @XmlElement(name = "Value")
     private String m_value;
-
-    private Path image;
     
     public ValutePeriod() {}
-
 
     public String getDate() { return m_date; }
 
