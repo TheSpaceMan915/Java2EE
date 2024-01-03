@@ -12,7 +12,8 @@ public class MetallCurs
     @XmlElement(name = "Record")
     private final List<PreciousMetall> m_list_metalls = new ArrayList<>();
 
-
+    private Timestamp createdAt;
+    
     public MetallCurs() {}
 
     public List<PreciousMetall> getListMetalls() { return m_list_metalls; }
