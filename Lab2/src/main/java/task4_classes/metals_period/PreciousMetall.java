@@ -19,8 +19,6 @@ public class PreciousMetall
     @XmlElement(name = "Sell")
     private String m_sell_price;
 
-    private double amount;
-
     public PreciousMetall() {}
 
     public String getSellPrice() { return m_sell_price; }
