@@ -16,6 +16,7 @@ public class EmailValidator implements Validator<String>
     private final int m_min_length = 5;
 
     private final int m_max_length = 30;
+    private final String mess = "Error";
 
 
     @Override
