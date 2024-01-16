@@ -16,8 +16,6 @@ public class EmailValidator implements Validator<String>
     private final int m_min_length = 5;
 
     private final int m_max_length = 30;
-    private final String mess = "Error";
-
 
     @Override
     public void validate(FacesContext context, UIComponent component, String str) throws ValidationException
